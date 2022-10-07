@@ -2,4 +2,4 @@ node_modules
 .env
 table_create.js
 table_drop.js
-public/assets/img/*
+public/assets/img/*.jpg
