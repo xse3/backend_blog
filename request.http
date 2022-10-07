@@ -1,0 +1,44 @@
+@host = http://localhost:4000
+
+### Create a new user
+POST {{host}}/api/user
+Content-Type: application/json
+    
+    {
+        "email": "test6@gmail.com",
+        "username": "test",
+        "password": "testA@123",
+        "role_id": 4
+    }
+
+### Get a user
+GET {{host}}/api/user/e3f9b4eb-6436-4215-b6a1-7fdfa0b789f6
+
+### GET a users list
+GET {{host}}/api/users?limit=1&page=1
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkyNjAzOTc0LTMyOWQtMTFlZC04ZmQwLTBhMDAyNzAwMDAxNCIsImlhdCI6MTY2MzU3MTA2NiwiZXhwIjoxNjYzNTcyMDY2fQ.QFKU7JtF9b4wiQoL2FL1d-twoX7uyJRBAvX-9C9ayNY
+
+### Update a user
+PUT {{host}}/api/user/f162a064-b56c-44d8-aff5-d911081a68e
+Content-Type: application/json
+    
+    {
+        "email": "admin3@gmail.c",
+        "username": "test1212",
+        "password": "test"
+    }
+
+### Delete a user
+DELETE {{host}}/api/user/:id
+
+
+### Create or Update Profile
+POST {{host}}/api/profile/f162a064-b56c-44d8-aff5-d911081a68e7
+Content-Type: application/json
+    
+    {
+        "first_name": "Belang",
+        "last_name": "Kucing",
+        "about_me": "Im a Cat",
+        "birthday": "2022-01-01"
+    }
